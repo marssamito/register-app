@@ -49,16 +49,16 @@ pipeline {
            }
        }
 
-       stage("Quality Gate"){
-           steps {
-		   timeout(time: 1, unit: 'MINUTES')
-		   {
-               script {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
-	       }
+      // stage("Quality Gate"){
+        //   steps {
+	//	   timeout(time: 1, unit: 'MINUTES')
+	//	   {
+          //     script {
+            //        waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
+	      // }
 			       
-                }	 
-            }
+                //}	 
+    //        }
 
         }
 
